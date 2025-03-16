@@ -8,11 +8,16 @@
     <!-- daisy ui link  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        html {
+    scroll-behavior: smooth;
+}
+    </style>
 </head>
 
 <body>
     <!-- navbar start  -->
-    <div class="navbar bg-base-100 opacity-80 fixed -mt-24   shadow-sm flex justify-between px-7">
+    <div id="nav_bar" class="navbar bg-base-100 opacity-80 fixed -mt-24   shadow-sm flex justify-between px-7">
         <div class="flex ">
             <a class="btn btn-ghost text-xl">English</a>
             <div>
@@ -21,9 +26,9 @@
             <a class="btn btn-ghost text-xl">জানালা</a>
         </div>
         <div class="flex space-x-3">
-            <button class="btn btn-outline btn-primary"><img src="./assets/fa-circle-question.png" alt="">FAQ</button>
-            <button class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png" alt="">Learn</button>
-            <button class="btn btn-outline btn-primary"><img src="./assets/fa-arrow-right-from-bracket.png"
+            <button class="btn btn-outline btn-primary" onclick="scrollToFAQ()"><img src="./assets/fa-circle-question.png" alt="">FAQ</button>
+            <button class="btn btn-outline btn-primary" onclick="scrollToVocubulary()"><img src="./assets/fa-book-open.png" alt="">Learn</button>
+            <button class="btn btn-outline btn-primary" onclick="logout()"><img src="./assets/fa-arrow-right-from-bracket.png"
                     alt="">Logout</button>
         </div>
     </div>
@@ -53,12 +58,12 @@
     </section>
     <!-- banner section end  -->
     <!-- vocubolary section start  -->
-    <section class="vocubulary">
+    <section class="vocubulary" id="vocabulary_section">
         <h1 class="text-4xl font-bold text-center"><span class="text-sky-400">Let's</span> Learn Vocabularies</h1>
     </section>
     <!-- vocubolary section end  -->
     <!-- FAQ section start  -->
-    <section class="faq my-24 mb-28 w-11/12 mx-auto">
+    <section class="faq my-24 mb-28 w-11/12 mx-auto"  id="faq">
         <h1 class="text-4xl font-bold text-center mb-24"><span class="text-sky-400">Frequently</span> Asked Questions
         </h1>
 
@@ -135,6 +140,7 @@
         </nav>
       </footer>
      <!-- footer section end  -->
+      <script src="./script/index.js"></script>
 </body>
 
 </html>
