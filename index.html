@@ -1,54 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English Janala</title>
-       <!-- daisy ui link  -->
-       <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-       <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- daisy ui link  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
-  <!-- navbar start  -->
-  <div class="navbar bg-base-100 shadow-sm flex justify-between px-7">
-    <div class="flex ">
-      <a class="btn btn-ghost text-xl">English</a>
-      <div>
-        <img src="./assets/logo.png" alt="">
-      </div>
-      <a class="btn btn-ghost text-xl">জানালা</a>
+    <!-- navbar start  -->
+    <div class="navbar bg-base-100 opacity-80 fixed -mt-24   shadow-sm flex justify-between px-7">
+        <div class="flex ">
+            <a class="btn btn-ghost text-xl">English</a>
+            <div>
+                <img src="./assets/logo.png" alt="">
+            </div>
+            <a class="btn btn-ghost text-xl">জানালা</a>
+        </div>
+        <div class="flex space-x-3">
+            <button class="btn btn-outline btn-primary"><img src="./assets/fa-circle-question.png" alt="">FAQ</button>
+            <button class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png" alt="">Learn</button>
+            <button class="btn btn-outline btn-primary"><img src="./assets/fa-arrow-right-from-bracket.png"
+                    alt="">Logout</button>
+        </div>
     </div>
-    <div class="flex space-x-3">
-        <button class="btn btn-outline btn-primary"><img src="./assets/fa-circle-question.png" alt="">FAQ</button>
-        <button class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png" alt="">Learn</button>
-        <button class="btn btn-outline btn-primary"><img src="./assets/fa-arrow-right-from-bracket.png" alt="">Logout</button>
-    </div>
-  </div>
-  <!-- navbar end  -->
-   <!-- banner section start  -->
+    <!-- navbar end  -->
+    <!-- banner section start  -->
     <section class="banner flex justify-between w-11/12 mx-auto my-24">
         <div class="left-banner space-y-5 w-1/2 pt-20">
-           <h1 class="text-5xl font-bold"><span class="text-sky-400">English</span> is Easy!!</h1>
-           <p class="text-xl">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive  Lessons আপনাকে নিয়ে  যাবে অন্য একটি Level এ</p>
-           <label class="input validator">
-            <input type="input" required placeholder="Username" pattern="[A-Za-z][A-Za-z0-9\-]*" minlength="3" maxlength="30" title="Only letters, numbers or dash" />
-          </label>
-          <label class="input validator">
-            <input type="password" required placeholder="Password" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must be more than 8 characters, including number, lowercase letter, uppercase letter" />
-          </label>
-          <div>
-            <button class="btn btn-primary">Get Started</button>
-          </div>
+            <h1 class="text-5xl font-bold"><span class="text-sky-400">English</span> is Easy!!</h1>
+            <p class="text-xl">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে
+                চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+            <label class="input validator">
+                <input type="input" required placeholder="Username" pattern="[A-Za-z][A-Za-z0-9\-]*" minlength="3"
+                    maxlength="30" title="Only letters, numbers or dash" />
+            </label>
+            <label class="input validator">
+                <input type="password" required placeholder="Password" minlength="6"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+                    title="Must be more than 8 characters, including number, lowercase letter, uppercase letter" />
+            </label>
+            <div>
+                <button class="btn btn-primary">Get Started</button>
+            </div>
         </div>
         <div class="right-banner w-1/2">
-         <img src="./assets/hero-student.png" alt="">
+            <img src="./assets/hero-student.png" alt="">
         </div>
     </section>
-   <!-- banner section end  -->
+    <!-- banner section end  -->
     <!-- vocubolary section start  -->
-     <section class="vocubulary">
+    <section class="vocubulary">
         <h1 class="text-4xl font-bold text-center"><span class="text-sky-400">Let's</span> Learn Vocabularies</h1>
-     </section>
+    </section>
     <!-- vocubolary section end  -->
+    <!-- FAQ section start  -->
+    <section class="faq my-24 w-11/12 mx-auto">
+        <h1 class="text-4xl font-bold text-center mb-24"><span class="text-sky-400">Frequently</span> Asked Questions
+        </h1>
+
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title font-semibold">1. What is the difference between var, let, and const?</div>
+            <div class="collapse-content text-sm text-gray-500">In JavaScript, var is function-scoped, while let and
+                const are block-scoped. var allows redeclaration; let allows updates; const is unchangeable. Use let for
+                variables and const for constants. Avoid var.</div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">2. What is the difference between map(), forEach(), and filter()?
+            </div>
+            <div class="collapse-content text-sm">map() creates a new array by transforming each element. forEach()
+                performs an action on each element but does not return a new array.
+                filter() creates a new array with elements that pass a condition.</div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">3. Explain arrow functions and how they are different from regular
+                functions?</div>
+            <div class="collapse-content text-sm">Arrow functions are a compact way to write functions using =>. Regular functions are big and more complex to write. Arrow functions are often used for simpler code.
+            </div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">4. How JavaScript Promises work?</div>
+            <div class="collapse-content text-sm">Promises in JavaScript represent future values with three states: pending, resolved, or rejected.
+            </div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">5. How closures work in JavaScript?</div>
+            <div class="collapse-content text-sm">Closures in JavaScrip occur when a function stops access to variables from its outer scope, even after the outer function has finished executing. This allows inner functions to remember and access variables even when called later.
+            </div>
+        </div>
+    </section>
+    <!-- FAQ section end  -->
 </body>
+
 </html>
