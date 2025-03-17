@@ -12,6 +12,10 @@
         html {
     scroll-behavior: smooth;
 }
+.active-btn {
+        background-color: #422AD5; /* Tailwind's primary color for the active state */
+        color: white;
+    }
     </style>
 </head>
 
@@ -23,7 +27,7 @@
             <div>
                 <img src="./assets/logo.png" alt="">
             </div>
-            <a class="btn btn-ghost text-xl">জানালা</a>
+            <a class="btn btn-ghost text-xl ">জানালা</a>
         </div>
         <div class="flex space-x-3">
             <button class="btn btn-outline btn-primary" onclick="scrollToFAQ()"><img src="./assets/fa-circle-question.png" alt="">FAQ</button>
@@ -34,32 +38,70 @@
     </div>
     <!-- navbar end  -->
     <!-- banner section start  -->
-    <section class="banner flex justify-between w-11/12 mx-auto my-24">
+    <section class="banner flex justify-between w-11/12 mx-auto my-24" id="banner">
         <div class="left-banner space-y-5 w-1/2 pt-20">
             <h1 class="text-5xl font-bold"><span class="text-sky-400">English</span> is Easy!!</h1>
             <p class="text-xl">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে
                 চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
             <label class="input validator">
-                <input type="input" required placeholder="Username" pattern="[A-Za-z][A-Za-z0-9\-]*" minlength="3"
+                <input type="input" required placeholder="Username" id="username" pattern="[A-Za-z][A-Za-z0-9\-]*" minlength="3"
                     maxlength="30" title="Only letters, numbers or dash" />
             </label>
             <label class="input validator">
-                <input type="password" required placeholder="Password" minlength="6"
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
-                    title="Must be more than 8 characters, including number, lowercase letter, uppercase letter" />
+                <input type="password" id="password" required placeholder="Password" />
             </label>
             <div>
-                <button class="btn btn-primary">Get Started</button>
+                <button onclick="logIn()" class="btn btn-primary">Get Started</button>
             </div>
         </div>
         <div class="right-banner w-1/2">
             <img src="./assets/hero-student.png" alt="">
+            
         </div>
     </section>
     <!-- banner section end  -->
     <!-- vocubolary section start  -->
-    <section class="vocubulary" id="vocabulary_section">
+    <section class="vocubulary  my-24 mb-28 w-11/12 mx-auto " id="vocabulary_section">
         <h1 class="text-4xl font-bold text-center"><span class="text-sky-400">Let's</span> Learn Vocabularies</h1>
+        <div class="flex space-x-4 justify-center mt-16" id="vocubolary_button_div">
+            <button class="btn hidden" onclick="my_modal_1.showModal()">open modal</button>
+            <dialog id="my_modal_1" class="modal">
+              <div class="modal-box" id="modal_box">
+                <h2 class="text-2xl font-bold">
+                   Word <span class="text-gray-500">Meaning</span>
+                </h2>
+                <p class="font-bold mt-2">Meaning</p>
+                <p class="text-gray-700">আগ্রহী</p>
+    
+                <p class="font-bold mt-4">Example</p>
+                <p class="text-gray-700">The kids were eager to open their gifts.</p>
+                <p class="font-bold mt-4">সমার্থক শব্দ গুলো</p>
+            <div class="flex gap-2 mt-2">
+                <span class="badge badge-outline">Enthusiastic</span>
+                <span class="badge badge-outline">Excited</span>
+                <span class="badge badge-outline">Keen</span>
+            </div>
+                  <form method="dialog">
+                  
+                    <button class="btn btn-primary mt-4">Complete Learing</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
+        </div>
+      
+        <div class="vocubulary_text text-center mt-16" id="not-selected-lesson-msg">
+            <P>আপনি এখনো কোন Lesson Select করেন নাই</P>
+            <h1 class="font-bold text-3xl">একটি Lesson Select করুন।</h1> 
+            <section id="loader" class=" text-center my-8 hidden">
+                <span class="loading loading-dots loading-xl"></span>
+            </section>  
+        </div>
+        
+        <div class="grid grid-cols-3 gap-4 p-4 bg-slate-200 mt-16 " id="all-words-container">
+             
+
+        </div>
     </section>
     <!-- vocubolary section end  -->
     <!-- FAQ section start  -->
@@ -140,7 +182,7 @@
         </nav>
       </footer>
      <!-- footer section end  -->
-      <script src="./script/index.js"></script>
+      <script src="./script/index.js"></script>   
 </body>
 
 </html>
