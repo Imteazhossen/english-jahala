@@ -26,12 +26,6 @@ English Janala is a user-friendly web platform designed to help students improve
 
 ---
 
-## 📸 Screenshots
-
-*(Optional: Add screenshots or GIFs of your site for visual presentation)*
-
----
-
 ## ⚙️ Setup Instructions
 
 1. **Clone the Repository**
